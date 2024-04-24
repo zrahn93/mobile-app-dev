@@ -1,5 +1,7 @@
 # Assignment 2
 
+## Design and Purpose
+
 **Purpose Statement:** The app in assignment 2 is managing a Wedding Invitation/Guest List. My fiance and I are planning our wedding, and currently have a list in Google Sheets. We've found that Google Sheets is not very easy to manage from a mobile application (deleting guests, analyzing the invitees, etc.). For this project, I decided to track our Guest list with this mobile application. The app has the following functionality.
 
 1. Add a new guest to the guest list
@@ -17,39 +19,9 @@
 </figure>
 </br>
 
-The app was tested with both the Web emulator and Android emulator. The screenshots below are from both platforms.
-
-<figure>
-  <img src="imgs/assignment2_00_start_web.png" alt="Initial App" style="height:300px">
-  <figcaption>Initial App</figcaption>
-</figure>
 </br>
 
-<figure>
-  <img src="imgs/assignment2_01_add_web.png" alt="Addding a Guest" style="height:300px">
-  <figcaption>Addding a Guest</figcaption>
-</figure>
-</br>
-
-<figure>
-  <img src="imgs/assignment2_02_list_web.png" alt="Guest List" style="height:300px">
-  <figcaption>Guest List</figcaption>
-</figure>
-</br>
-
-<figure>
-  <img src="imgs/assignment2_03_overflow_android.png" alt="Scroll List & Delete Guest" style="height:300px">
-  <figcaption>Scroll List & Delete Guest</figcaption>
-</figure>
-</br>
-
-<figure>
-  <img src="imgs/assignment2_04_error_android.png" alt="Error Handling" style="height:300px">
-  <figcaption>Error Handling</figcaption>
-</figure>
-</br>
-
-</br>
+## Basic Use
 
 **Functionality/Explanations:**
 
@@ -119,4 +91,38 @@ The app was tested with both the Web emulator and Android emulator. The screensh
 
 * A React Native `StyleSheet` component is created to enhance the app's display using the flexbox methodology.
 
+</br>
+
+## Screenshots
+
+The app was tested with both the Web emulator and Android emulator. The screenshots below are from both platforms.
+
+<figure>
+  <img src="imgs/assignment2_00_start_web.png" alt="Initial App" style="height:300px">
+  <figcaption>Initial App</figcaption>
+</figure>
+</br>
+
+<figure>
+  <img src="imgs/assignment2_01_add_web.png" alt="Addding a Guest" style="height:300px">
+  <figcaption>Addding a Guest</figcaption>
+</figure>
+</br>
+
+<figure>
+  <img src="imgs/assignment2_02_list_web.png" alt="Guest List" style="height:300px">
+  <figcaption>Guest List</figcaption>
+</figure>
+</br>
+
+<figure>
+  <img src="imgs/assignment2_03_overflow_android.png" alt="Scroll List & Delete Guest" style="height:300px">
+  <figcaption>Scroll List & Delete Guest</figcaption>
+</figure>
+</br>
+
+<figure>
+  <img src="imgs/assignment2_04_error_android.png" alt="Error Handling" style="height:300px">
+  <figcaption>Error Handling</figcaption>
+</figure>
 </br>
