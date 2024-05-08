@@ -59,19 +59,19 @@ The app was tested with both the Web emulator and Android emulator. The screensh
 </br>
 
 <figure>
-  <img src="imgs/assignment2_02_image.png" alt="Image Screen" style="height:300px">
+  <img src="imgs/assignment3_02_image.png" alt="Image Screen" style="height:300px">
   <figcaption>Image Screen</figcaption>
 </figure>
 </br>
 
 <figure>
-  <img src="imgs/assignment2_03_profile.png" alt="Profile Screen" style="height:300px">
+  <img src="imgs/assignment3_03_profile.png" alt="Profile Screen" style="height:300px">
   <figcaption>Profile Screen</figcaption>
 </figure>
 </br>
 
 <figure>
-  <img src="imgs/assignment2_04_demo.gif" alt="Profile Screen" style="height:300px">
-  <figcaption>Profile Screen</figcaption>
+  <img src="imgs/assignment3_04_demo.gif" alt="Demo" style="height:300px">
+  <figcaption>Demo</figcaption>
 </figure>
 </br>
