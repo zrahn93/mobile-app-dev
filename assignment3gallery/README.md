@@ -53,25 +53,25 @@
 The app was tested with both the Web emulator and Android emulator. The screenshots below are from both platforms.
 
 <figure>
-  <img src="imgs/assignment2_01_gallery.png" alt="Gallery Screen" style="height:300px">
+  <img src="imgs/assignment3_01_gallery.png" alt="Gallery Screen" style="height:500px">
   <figcaption>Gallery Screen</figcaption>
 </figure>
-</br>
+</br></br>
 
 <figure>
-  <img src="imgs/assignment3_02_image.png" alt="Image Screen" style="height:300px">
+  <img src="imgs/assignment3_02_image.png" alt="Image Screen" style="height:500px">
   <figcaption>Image Screen</figcaption>
 </figure>
-</br>
+</br></br>
 
 <figure>
-  <img src="imgs/assignment3_03_profile.png" alt="Profile Screen" style="height:300px">
+  <img src="imgs/assignment3_03_profile.png" alt="Profile Screen" style="height:500px">
   <figcaption>Profile Screen</figcaption>
 </figure>
-</br>
+</br></br>
 
 <figure>
-  <img src="imgs/assignment3_04_demo.gif" alt="Demo" style="height:300px">
+  <img src="imgs/assignment3_04_demo.gif" alt="Demo" style="height:500px">
   <figcaption>Demo</figcaption>
 </figure>
-</br>
+</br></br>
