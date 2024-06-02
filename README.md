@@ -7,3 +7,4 @@ Author: Zachary Rahn
  * [Assignment 1: MyFirstReactNative](MyFirstReactNative)
  * [Assignment 2: assignment2list](assignment2list)
  * [Assignment 3: assignment3gallery](assignment3gallery)
+ * [Assignment 4: assignment4messaging](assignment4messaging)
