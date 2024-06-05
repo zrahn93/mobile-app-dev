@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { ScrollView, FlatList, SafeAreaView, View } from 'react-native';
+import { ScrollView, SafeAreaView, View } from 'react-native';
 import { Text, TextInput, PaperProvider } from 'react-native-paper';
 import { useIsFocused } from "@react-navigation/native";
 import Message from '../components/message'
@@ -44,29 +44,21 @@ const Posts = ( props => {
   return (
     <View style={[{margin: 10}]}>
       <Text variant="titleSmall">Tag Filter</Text>
-      <FlatList
-        style={{marginBottom: '5px'}}
-        data={[...tagFilters, '']}
-        keyExtractor={(item, index) => index}
-        renderItem={({ item: tagStr, index }) => (
+      { [...tagFilters, ''].map( (tagStr, index) => { return(
           <TextInput
-            value={tagStr}
-            placeholder='Filter by tags'
-            onChangeText={newTag => {
-              filterByTags(index, newTag)
-            }}
-          />
-        )}
-      />
-      <Text variant="titleLarge">Posts</Text>
-      <View>
-        <FlatList
-          data={messages}
-          keyExtractor={(item, index) => index}
-          renderItem={({item: messageData}) => (
-            <Message message={messageData.message} tags={messageData.tags} />
-          )}
+          key={index}
+          value={tagStr}
+          placeholder='Filter by tags'
+          onChangeText={newTag => {
+            filterByTags(index, newTag)
+          }}
         />
+      )})}
+      <Text variant="titleLarge" style={{marginTop: 35}}>Posts</Text>
+      <View>
+        { [...messages, ''].map( (messageData, index) => { return(
+          <Message key={index} message={messageData.message} tags={messageData.tags} />
+        )})}
       </View>
       <Text variant="labelMedium">{messages.length} total post{messages.length != 1 ? 's' : ''}</Text>
     </View>

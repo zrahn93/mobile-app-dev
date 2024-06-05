@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { SafeAreaView, ScrollView, Alert, View, FlatList } from 'react-native';
+import { SafeAreaView, ScrollView, Alert } from 'react-native';
 import { Text, TextInput, Button, PaperProvider } from 'react-native-paper';
 import theme from '../styles/theme';
 import styles from '../styles/style';
@@ -51,35 +51,26 @@ const PostScreen = ( () => {
     <ScrollView>
       <PaperProvider theme={theme}>
         <SafeAreaView contentContainerStyle={[styles.container]}>
-            <Text variant="titleLarge">Journal Entry:</Text>
             <TextInput
-              ref={this.inputText}
-              style={{margin:'50px'}}
-              multiline
-              numLines={10}
-              onChangeText={text => setJournalContent(text)}
-              value={journalContent}
-              onChange={(e) => {
-                e.nativeEvent.target.style.height = 0;
-                e.nativeEvent.target.style.height = `${e.nativeEvent.target.scrollHeight * 0.8}px`;
-              }}
+                ref={this.inputText}
+                style={{margin:'50px'}}
+                multiline
+                numberOfLines={15}
+                label='Journal Entry'
+                onChangeText={text => setJournalContent(text)}
+                value={journalContent}
             />
-            <FlatList
-              style={{marginTop: '5px'}}
-              data={[...tags, '']}
-              keyExtractor={(item, index) => index}
-              renderItem={({ item: tagStr, index }) => (
+            { [...tags, ''].map( (tagStr, index) => { return(
                 <TextInput
-                  value={tagStr}
-                  placeholder='Add a tag to the post'
-                  onChangeText={newTag => {
-                    formatTags(index, newTag)
-                  }}
-                />
-              )}
-            />
+                key={index}
+                value={tagStr}
+                placeholder='Add a tag to the post'
+                onChangeText={newTag => {
+                  formatTags(index, newTag)
+                }}
+              />            )})}
             <Button
-              style={[{alignSelf: 'center', width: '30%'}]}
+              style={[{alignSelf: 'center', width: '30%', marginTop: 50}]}
               icon="account-check"
               mode="contained-tonal"
               onPress={postJournalEntry}
