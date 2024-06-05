@@ -56,7 +56,7 @@ const Posts = ( props => {
       )})}
       <Text variant="titleLarge" style={{marginTop: 35}}>Posts</Text>
       <View>
-        { [...messages, ''].map( (messageData, index) => { return(
+        { messages.map( (messageData, index) => { return(
           <Message key={index} message={messageData.message} tags={messageData.tags} />
         )})}
       </View>

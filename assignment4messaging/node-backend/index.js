@@ -39,7 +39,7 @@ app.get('/messages', function (req, res) {
       if (tagStr) {
          tagFilter = tagStr.split(',')
          console.debug(`\tfiltering by tags: ${tagFilter}`)
-         dbSearch = dbo.collection('messages').find({"tags": {$all: tagFilter}})
+         dbSearch = dbo.collection('messages').find({"tags": {$in: tagFilter}})
       }
       else {
          dbSearch = dbo.collection('messages').find({})
