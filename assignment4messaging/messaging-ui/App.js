@@ -28,7 +28,7 @@ export default function App() {
             tabPress: e => { e.preventDefault(); },
           }}
           options={{title:"", tabBarIcon: ({ color, size }) => {
-              return <Icon name="message-star" size={size*2} color={theme.colors.primary} />;
+              return <Icon name="message-star" size={size*1.5} color={theme.colors.primary} />;
             },
           }}
         />

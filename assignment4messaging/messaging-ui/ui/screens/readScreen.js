@@ -7,12 +7,11 @@ import theme from '../styles/theme';
 import styles from '../styles/style';
 
 const Posts = ( props => {
-  const [messages, setMessages] = useState('');
+  const [messages, setMessages] = useState([]);
   const [tagFilters, setTagFilters] = useState([]);
   const isFocused = useIsFocused();
 
   const getJournalEntries = () => {
-    //TODO: add filters
     const url = `http://node.cci.drexel.edu:9331/messages?tags=${tagFilters.join(',')}`;
     fetch(url)
       .then(response => response.json())

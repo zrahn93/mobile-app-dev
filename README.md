@@ -8,3 +8,4 @@ Author: Zachary Rahn
  * [Assignment 2: assignment2list](assignment2list)
  * [Assignment 3: assignment3gallery](assignment3gallery)
  * [Assignment 4: assignment4messaging](assignment4messaging)
+ * [Final Project: hometown-compass](hometown-compass)
