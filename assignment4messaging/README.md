@@ -6,6 +6,13 @@ Author: Zachary Rahn (zr66)
 
 The Journal App is a React Native mobile app with functionality to write & store posts and to read those posts at a later time. This app will send information from the mobile app to a backend API that connects to a DB to store the data. The app also requests, queries and returns those posts to the user for reading. It is important to store and persist the data so that it can be accessed later (maybe even after a significant amount of time passes). Journaling has been a popular activity for teenagers, those who want to practice creative writing, or keep track of day-to-day activities.
 
+## Design
+
+<figure>
+  <img src="./design.png" alt="Demo" style="height:500px">
+  <figcaption>Initial Design</figcaption>
+</figure>
+
 ## React Native Front-end
 
 [./messaging-ui](messaging-ui)
