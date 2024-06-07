@@ -75,15 +75,17 @@ GET Request: https://news.google.com/rss/search?q=local+news+Phoenixville,+PA&hl
 
 GET Request: https://test.api.amadeus.com/v1/shopping/activities?longitude=-3.69170868&latitude=40.41436995&radius=1
 ```json
-{ "data": [ "name": "Skip-the-line tickets to the Prado Museum",
+{ "data": [
+    { "name": "Skip-the-line tickets to the Prado Museum",
       "shortDescription": "Book your tickets for the Prado Museum in Madrid, discover masterpieces by Velázquez, Goya, Mantegna, Raphael, Tintoretto and access all temporary exhibitions.",
       "geoCode": {
         "latitude": "40.414000",
         "longitude": "-3.691000"
       },
       "pictures": [ "https://images.musement.com/cover/0001/07/prado-museum-tickets_header-6456.jpeg?w=500" ],
-      "price": { "currencyCode": "EUR", "amount": "16.00“ }
-    }
+      "price": { "currencyCode": "EUR", "amount": "16.00" }
+    },
+    { ... }
   ]
 }
 ```
@@ -138,8 +140,8 @@ Data:
    "story": "Hello World. This is my local news.",
    "date": "6/6/2024",
    "location": "Phoenixville, PA",
-   "source": 'Hometown Compass',
-   "comments": [ "Insightful comment“]
+   "source": "Hometown Compass",
+   "comments": [ "Insightful comment" ]
 }
 ```
 
