@@ -19,6 +19,7 @@ const Attractions = ( props => {
       if (loc !== null) {
           console.log("Received location: " + loc);
           setSearchLocation(loc)
+          //getAttractions()
       }
     } catch (error) {
       console.log("Did not retrieve data for Location")
@@ -33,33 +34,32 @@ const Attractions = ( props => {
     else {
       var url = `https://geocode.maps.co/search?q=${searchLocation}&api_key=${geocodeKey}`;
       fetch(url)
-      .then(response => response.json())
-      .then(data => {
-          console.log('successful geocode response', data)
-
-          const lat = data[0].lat
-          const lon = data[0].lon
-          url = `http://node.cci.drexel.edu:9331/attractions?lat=${lat}&lon=${lon}&radius=10`
-          fetch(url)
-          .then(response => response.json())
-          .then(data => {
-              console.log('successful attractions response', data)
-              setAttractions(data.attractions)
-              })
-          .catch(error => {
-              console.log(error);
-          });
-      })
-      .catch(error => {
-          console.log(error);
-      });
-    }
-    getAttractions();
+        .then(response => response.json())
+        .then(data => {
+            console.log('successful geocode response', data)
+  
+            const lat = data[0].lat
+            const lon = data[0].lon
+            url = `http://node.cci.drexel.edu:9331/attractions?lat=${lat}&lon=${lon}&radius=10`
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                console.log('successful attractions response', data)
+                setAttractions(data.attractions)
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        });
+      }
   };
 
   useEffect(() => {
     _retrieveLocation();
-  }, []);
+  }, [isFocused]);
 
   return (
     <View style={[styles.container]}>

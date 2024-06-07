@@ -50,8 +50,9 @@ const Feed = ( props => {
   }
 
   useEffect(() => {
+    setStories([])
     _retrieveData()
-  }, []);
+  }, [isFocused]);
 
   const getFeed = () => {
     if (searchLocation === "") {
@@ -100,7 +101,14 @@ const Feed = ( props => {
       </View>
       <View>
       {stories.map( (storyData, index)=> { return (
-        <Story key={index} data={storyData} showComments={false} user={user} displayName={userDisplayName} commentKey={commentKeys[index]} />
+        <Story
+        key={index}
+        data={storyData}
+        showComments={false}
+        user={user}
+        displayName={userDisplayName}
+        commentKey={commentKeys[index]}
+        numStories={stories.length}/>
       )})}
       </View>
     </View>

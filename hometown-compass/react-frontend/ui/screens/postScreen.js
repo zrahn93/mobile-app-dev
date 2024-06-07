@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { SafeAreaView, ScrollView, Alert, View, ImageBackground } from 'react-native';
 import { Text, TextInput, Button, PaperProvider } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useIsFocused } from "@react-navigation/native";
 import theme from '../styles/theme';
 import styles from '../styles/style';
 import uuid from 'react-native-uuid';
@@ -10,6 +11,7 @@ const PostScreen = ( () => {
     const [title, setTitle] = useState('');
     const [location, setLocation] = useState('');
     const [postContent, setPostContent] = useState('');
+    const isFocused = useIsFocused();
     this.inputText = React.createRef();
 
     _retrieveLocation = async () => {
@@ -27,7 +29,7 @@ const PostScreen = ( () => {
 
     useEffect(() => {
         _retrieveLocation();
-    }, []);
+    }, [isFocused]);
 
     const sendPost = () => {
         console.log("Posting: ", title)
@@ -88,7 +90,7 @@ const PostScreen = ( () => {
                                 value={postContent}
                             />
                             <Button
-                                style={[{alignSelf: 'center', width: '30%', paddingTop: 50}]}
+                                style={[{alignSelf: 'center', width: '30%', marginTop: 50}]}
                                 icon="account-check"
                                 mode="contained-tonal"
                                 onPress={sendPost}

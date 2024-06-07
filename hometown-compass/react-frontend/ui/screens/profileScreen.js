@@ -21,13 +21,13 @@ const ProfileScreen = ( ({navigation}) => {
     try {
       await AsyncStorage.setItem('username', username);
     } catch (error) {
-      console.error("Error saving data for Location")
+      console.error("Error saving data for Username")
       console.error(error)
     }
     try {
       await AsyncStorage.setItem('displayName', displayName);
     } catch (error) {
-      console.error("Error saving data for Location")
+      console.error("Error saving data for display name")
       console.error(error)
     }
   }
@@ -70,6 +70,7 @@ const ProfileScreen = ( ({navigation}) => {
   }, []);
 
   const saveProfile = () => {
+    _storeData();
     console.log("Sending user info.")
     const url = 'http://node.cci.drexel.edu:9331/updateUserInfo';
     const postOptions = {
@@ -87,7 +88,6 @@ const ProfileScreen = ( ({navigation}) => {
         if (data.status == 200) {
             console.log("Updated user information.")
             Alert.alert("Updated user information.")
-            _storeData();
         } else {
             Alert.alert("Error: Failed to update user information")
         }
@@ -132,6 +132,11 @@ const ProfileScreen = ( ({navigation}) => {
               mode="contained-tonal"
               onPress={() => saveProfile()}
             >Save</Button>
+            {/* <Button
+              style={{marginTop: 40}}
+              mode="contained-tonal"
+              onPress={() => AsyncStorage.clear()}
+            >Reset</Button> */}
           </View>
       </View>
     </PaperProvider>

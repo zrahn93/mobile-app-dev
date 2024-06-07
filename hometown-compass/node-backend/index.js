@@ -210,8 +210,6 @@ app.post('/updatePost', (req, res) => {
       }
       const dbo = client.db(databaseName);
 
-      console.log("here")
-      console.log(storyData)
       delete storyData['_id']
       dbo.collection("hometown_posts").updateOne({id: storyData.id}, {$set: storyData}, {upsert: true}, function(err, dbResponse) {
          // Insert error
