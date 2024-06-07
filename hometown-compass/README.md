@@ -136,12 +136,12 @@ Data:
 ```json
 {
   "id": "ABC123",
-  "title": "News Story",
-  "story": "Hello World. This is my local news.",
-  "date": "6/6/2024",
-  "location": "Phoenixville, PA",
-  "source": "Hometown Compass",
-  "comments": [ "Insightful comment" ]
+  "title": "News Story",
+  "story": "Hello World. This is my local news.",
+  "date": "6/6/2024",
+  "location": "Phoenixville, PA",
+  "source": "Hometown Compass",
+  "comments": [ "Insightful comment" ]
 }
 ```
 
