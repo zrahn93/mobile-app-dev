@@ -42,18 +42,20 @@ The purpose of the app is to create a platform for sharing news, events, and col
 </figure>
 <figure>
   <img src="./imgs/postScreen.png" alt="Design" style="height:500px">
-  <figcaption>Story Post Screen</figcaption>
+  <figcaption>Local Story Post Screen</figcaption>
 </figure>
 <figure>
   <img src="./imgs/feedScreen.png" alt="Design" style="height:500px">
-  <figcaption>News Feed Screen</figcaption>
+  <figcaption>Local News Feed Screen</figcaption>
+</figure>
+<figure>
+  <img src="./imgs/attractionsScreen.png" alt="Design" style="height:500px">
+  <figcaption>Local Attractions Screen</figcaption>
 </figure>
 <figure>
   <img src="./imgs/demo.gif" alt="Design" style="height:500px">
   <figcaption>**Demo**</figcaption>
 </figure>
-
-<p style="color:red">The Attraction Screen cannot be shown due to a quota limit on the 3rd-parties free API</p>
 
 ### Third-Party APIs
 
